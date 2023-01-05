@@ -1,0 +1,140 @@
+  body {
+    font-family: Lato, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    text-align: center;
+    color: rgb(0, 95, 8);
+  }
+  h2 {
+    text-align: left;
+    color: rgb(0, 95, 8);
+    margin-bottom: 0%;
+  }
+
+  h3 {
+    color: rgb(0, 47, 4);
+    font-family: Arial, sans-serif;
+    margin-bottom: 0%;
+  }
+
+  p {
+    margin: 0;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  div {
+    margin: 0;
+    padding: 0;
+  }
+
+  .pb {
+    position: relative;
+    display: flex;
+    align-items: left;
+  }
+  
+  .pb div {
+    flex: 1;
+  }
+  
+  .pb::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .pb::after {
+    content: attr(data-level) "%";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(attr(data-level) * 1%);
+    height: 100%;
+    background-color: blue;
+    border-radius: 5px;
+    text-align: left;
+    padding-right: 5px;
+    font-size: 0.8em;
+    color: white;
+    outline-color: #333;
+  }
+  
+  .experience, .education {
+    border-right: 1px solid #ccc;
+    padding: 20px;
+  }
+  
+  .skills, .languages, .hobbies {
+    padding: 20px;
+  }
+  
+
+  .progress-bar {
+    position: relative;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 5px;
+  }
+  
+  .fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgb(0, 95, 8);
+    border-radius: 5px;
+  }
+  .main_div {
+    text-align:left;
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+  .container {
+
+  }
+  
+
+  .space {
+    height: 60px;
+  }
+
+  .footer {
+    border-top: solid;
+    background-color: rgb(0, 95, 8);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .footer a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .octicon {
+    fill:white;
+    display: inline-block;
+    vertical-align: middle;
+    height: 24px;
+  }
+
+
+
+  /*  
+  * {
+    outline: solid;
+  }
+   */

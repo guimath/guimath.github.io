@@ -2,21 +2,32 @@
 
 /* Variables */
 
+/*colors (DARK MODE)
+*/
+@background: #4D5061;
+@color-primary: #97DB4F;
+@color-secondary: #049A8F;
+@text-color : white;
+@color-light: white;
+/*colors (LIGHT MODE) 
 @background: white;
-
 @color-primary: rgb(0, 95, 8);
 @color-secondary: rgb(0, 25, 95);
+@text-color : black;
 @color-light: black;
-@spacing: 15px;
-@radius: 4px;
+*/
 
-@date: 70px;
-@dotborder: 4px;
-@dot: 10px;
-@line: 4px;
 
+// fonts
 @font-title: 'Lato', sans-serif;
 @font-text: 'Arial', sans-serif;
+// timeline
+@spacing: 15px; 
+@radius: 4px;
+@date: 70px;
+@dotborder: 4px;
+@dot: 5px;
+@line: 4px;
 
 /* Base */
 
@@ -24,6 +35,12 @@ body {
   background: @background;
   font-size: 16px;
   margin:0px;
+  // letter
+  letter-spacing: 0.5px;   
+  line-height: 1.4em;
+  font-size: 1.03em;   
+  font-family: @font-text;  
+  color : @text-color;
 }
 
 p {
@@ -45,7 +62,8 @@ h1 {
    text-align: center;
    color: @color-primary; 
    padding: 0px;
-   margin: 5px;
+   margin: 10px;
+   margin-bottom: 25px;
  }
  
  h2 {
@@ -61,39 +79,35 @@ h1 {
    margin-bottom: 0%;
  }
 
-#timeline-content {
-  margin-top: @spacing;
-  text-align: center;  
+.first-h3 {
+  margin-top: 3px;
+}
+.first-h2 {
+  margin-top: 0px;
 }
 
 /* Timeline */
-
 .timeline {
   border-left: @line solid fade(@color-primary, 70%);
   border-bottom-right-radius: @radius;
   border-top-right-radius: @radius;    
   /*background: fade(@color-light, 3%);
   color: fade(black, 80%);*/
-  font-family: @font-text;  
-  margin: @spacing auto;  
-  letter-spacing: 0.5px;   
   position: relative;
-  line-height: 1.4em;
-  font-size: 1.03em;   
+  margin: @spacing auto;  
   padding: @spacing;   
   list-style: none;
   text-align: left;  
-  font-weight: 100;  
   width: 70%; 
-  margin-left: @date + 2*@spacing;
+  margin-left: @date + 2*@spacing; // space for the date
   
 
   h3 {
-    margin-top: 0%;
+    margin-top: 0%; // removes big space at the top
   }
 
   .event {
-    border-bottom: 1px dashed fade(@color-light, 10%);
+    border-bottom: 1px solid fade(@color-primary, 30%); //separator
     padding-bottom: (@spacing * 0.5);
     margin-bottom: @spacing;  
     position: relative;
@@ -123,14 +137,14 @@ h1 {
 
     &:after {
       box-shadow: 0 0 0 @dotborder fade(@color-secondary,100%);    
-      left: (@spacing + @line + (@dot * 0.35)) * -1;        
+      left: (@spacing + @line + (@dot * 0.1)) * -1;        
       border-color: @color-secondary;    
       background-color: @color-secondary;    
       border-radius: 50%;  
       height: @dot;
       width: @dot;
       content: "";
-      top: 5px;
+      top: 8px;
     }
   }
 }
@@ -147,56 +161,11 @@ div {
   padding: 0;
 }
 
-.pb {
-  position: relative;
-  display: flex;
-  align-items: left;
-}
-
-.pb div {
-  flex: 1;
-}
-
-.pb::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 10px;
-  background-color: #ccc;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-
-.pb::after {
-  content: attr(data-level) "%";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: calc(attr(data-level) * 1%);
-  height: 100%;
-  background-color: blue;
-  border-radius: 5px;
-  text-align: left;
-  padding-right: 5px;
-  font-size: 0.8em;
-  color: white;
-  outline-color: #333;
-}
-
-.experience, .education {
-  border-right: 1px solid #ccc;
-  padding: 20px;
-}
-
-.skills, .languages, .hobbies {
-  padding: 20px;
-}
-
-
+/* proficency bar*/
 .progress-bar {
   position: relative;
-  height: 10px;
-  background-color: #ccc;
+  height: 5px;
+  background-color: fade(@color-primary,10%);
   border-radius: 5px;
 }
 
@@ -205,63 +174,60 @@ div {
   top: 0;
   left: 0;
   height: 100%;
-  background-color: rgb(0, 95, 8);
+  background-color: @color-primary;
   border-radius: 5px;
 }
-.main_div {
-  text-align:left;
-  position: relative;
-  height: 100%;
-  width: 100%;
-  padding :0%;
-}
-.container {
-  margin-top: 10px;
-}
 
 
-.space {
-  height: 60px;
-}
+
+
 
 .footer {
-  border-top: solid;
-  background-color: rgb(0, 95, 8);
+  //border-top: solid;
+  background-color: @color-primary;
   display: flex;
-  margin:0px;
   justify-content: space-between;
-  padding: 20px;
   position: relative;
+  padding: 10px;
+  margin:0px;
+  margin-top: 10px;
+  padding-right: 10%;
+  padding-left: 10%;
+  a {
+    color: @background;
+    text-decoration: none;//remove underline
+  }
+  .slogo {
+    fill: @background;
+    height: 24px;
+    vertical-align: -7px;
+  }
+  
+  .linkedin {
+    vertical-align: -5px;
+  }
 }
 
-.footer a {
-  color: white;
-  text-decoration: none;
-}
-
-.octicon {
-  fill:white;
-  display: inline-block;
-  vertical-align: middle;
-  height: 24px;
-}
 
 
 .col1 {
   flex: 60%;
   
   h2 {
-    margin-left: @date+2*@spacing;
+    margin-left: @date+2*@spacing; // aligning w time line
   }
 }
 .col2 {
   border-left: solid;
-  border-left-color: rgba(0, 95, 8, 0.3) ;
+  border-left-color: fade(@color-primary, 30%);
   padding-left : 10px;
-  padding-right : 10px;
+  margin-right : 10px;
   flex: 40%;  
 
 }
+
+
+
 
 /*  
 * {

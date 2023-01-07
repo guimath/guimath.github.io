@@ -1,10 +1,25 @@
 /* Import */
 /* Variables */
+/*colors (DARK MODE)
+@background: #4D5061;
+@color-primary: #97DB4F;
+@color-secondary: #049A8F;
+@text-color : white;
+@text-color-primary: white;
+@color-light: white;
+*/
+/*colors (LIGHT MODE) 
+*/
 /* Base */
 body {
   background: white;
   font-size: 16px;
   margin: 0px;
+  letter-spacing: 0.5px;
+  line-height: 1.4em;
+  font-size: 1.03em;
+  font-family: 'Arial', sans-serif;
+  color: black;
 }
 p {
   font-weight: 300;
@@ -22,7 +37,8 @@ h1 {
   text-align: center;
   color: #005f08;
   padding: 0px;
-  margin: 5px;
+  margin: 10px;
+  margin-bottom: 25px;
 }
 h2 {
   text-align: left;
@@ -35,9 +51,11 @@ h3 {
   font-family: Arial, sans-serif;
   margin-bottom: 0%;
 }
-#timeline-content {
-  margin-top: 15px;
-  text-align: center;
+.first-h3 {
+  margin-top: 3px;
+}
+.first-h2 {
+  margin-top: 0px;
 }
 /* Timeline */
 .timeline {
@@ -46,16 +64,11 @@ h3 {
   border-top-right-radius: 4px;
   /*background: fade(@color-light, 3%);
   color: fade(black, 80%);*/
-  font-family: 'Arial', sans-serif;
-  margin: 15px auto;
-  letter-spacing: 0.5px;
   position: relative;
-  line-height: 1.4em;
-  font-size: 1.03em;
+  margin: 15px auto;
   padding: 15px;
   list-style: none;
   text-align: left;
-  font-weight: 100;
   width: 70%;
   margin-left: 100px;
 }
@@ -63,7 +76,7 @@ h3 {
   margin-top: 0%;
 }
 .timeline .event {
-  border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 95, 8, 0.3);
   padding-bottom: 7.5px;
   margin-bottom: 15px;
   position: relative;
@@ -80,7 +93,7 @@ h3 {
   top: 0;
 }
 .timeline .event:before {
-  left: -108.5px;
+  left: -101px;
   color: rgba(0, 0, 0, 0.4);
   content: attr(data-date);
   text-align: right;
@@ -91,14 +104,14 @@ h3 {
 }
 .timeline .event:after {
   box-shadow: 0 0 0 4px #00195f;
-  left: -22.5px;
+  left: -19.5px;
   border-color: #00195f;
   background-color: #00195f;
   border-radius: 50%;
-  height: 10px;
-  width: 10px;
+  height: 5px;
+  width: 5px;
   content: "";
-  top: 5px;
+  top: 8px;
 }
 ul {
   list-style: none;
@@ -109,52 +122,11 @@ div {
   margin: 0;
   padding: 0;
 }
-.pb {
-  position: relative;
-  display: flex;
-  align-items: left;
-}
-.pb div {
-  flex: 1;
-}
-.pb::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 10px;
-  background-color: #ccc;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-.pb::after {
-  content: attr(data-level) "%";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: calc(attr(data-level) * 1%);
-  height: 100%;
-  background-color: blue;
-  border-radius: 5px;
-  text-align: left;
-  padding-right: 5px;
-  font-size: 0.8em;
-  color: white;
-  outline-color: #333;
-}
-.experience,
-.education {
-  border-right: 1px solid #ccc;
-  padding: 20px;
-}
-.skills,
-.languages,
-.hobbies {
-  padding: 20px;
-}
+/* proficency bar*/
 .progress-bar {
   position: relative;
-  height: 10px;
-  background-color: #ccc;
+  height: 5px;
+  background-color: rgba(0, 95, 8, 0.1);
   border-radius: 5px;
 }
 .fill {
@@ -165,37 +137,28 @@ div {
   background-color: #005f08;
   border-radius: 5px;
 }
-.main_div {
-  text-align: left;
-  position: relative;
-  height: 100%;
-  width: 100%;
-  padding: 0%;
-}
-.container {
-  margin-top: 10px;
-}
-.space {
-  height: 60px;
-}
 .footer {
-  border-top: solid;
   background-color: #005f08;
   display: flex;
-  margin: 0px;
   justify-content: space-between;
-  padding: 20px;
   position: relative;
+  padding: 10px;
+  margin: 0px;
+  margin-top: 10px;
+  padding-right: 10%;
+  padding-left: 10%;
 }
 .footer a {
   color: white;
   text-decoration: none;
 }
-.octicon {
+.footer .slogo {
   fill: white;
-  display: inline-block;
-  vertical-align: middle;
   height: 24px;
+  vertical-align: -7px;
+}
+.footer .linkedin {
+  vertical-align: -5px;
 }
 .col1 {
   flex: 60%;
@@ -207,7 +170,7 @@ div {
   border-left: solid;
   border-left-color: rgba(0, 95, 8, 0.3);
   padding-left: 10px;
-  padding-right: 10px;
+  margin-right: 10px;
   flex: 40%;
 }
 /*  

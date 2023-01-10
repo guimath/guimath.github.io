@@ -1,15 +1,6 @@
-/* Import */
-/* Variables */
-/*colors (DARK MODE)
-@background: #4D5061;
-@color-primary: #97DB4F;
-@color-secondary: #049A8F;
-@text-color : white;
-@text-color-primary: white;
-@color-light: white;
-*/
-/*colors (LIGHT MODE) 
-*/
+/* Debug */
+/* Style modes */
+/*colors (LIGHT MODE) */
 /* Base */
 body {
   background: white;
@@ -137,7 +128,7 @@ div {
   background-color: #005f08;
   border-radius: 5px;
 }
-.footer {
+footer {
   background-color: #005f08;
   display: flex;
   justify-content: space-between;
@@ -148,16 +139,16 @@ div {
   padding-right: 10%;
   padding-left: 10%;
 }
-.footer a {
+footer a {
   color: white;
   text-decoration: none;
 }
-.footer .slogo {
+footer .slogo {
   fill: white;
   height: 24px;
   vertical-align: -7px;
 }
-.footer .linkedin {
+footer .linkedin {
   vertical-align: -5px;
 }
 .col1 {

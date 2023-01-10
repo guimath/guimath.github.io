@@ -1,21 +1,30 @@
-/* Import */
+/* Debug */
+@debug: false;
 
-/* Variables */
+* {
+  & when (@debug = true) {
+    outline: solid;
+  }
+}
 
-/*colors (DARK MODE)
-*/
-@background: #4D5061;
-@color-primary: #97DB4F;
-@color-secondary: #049A8F;
-@text-color : white;
-@color-light: white;
-/*colors (LIGHT MODE) 
-@background: white;
-@color-primary: rgb(0, 95, 8);
-@color-secondary: rgb(0, 25, 95);
-@text-color : black;
-@color-light: black;
-*/
+/* Style modes */
+.define-colors();
+.define-colors() when (@dark = true) {
+  /*colors (DARK MODE)*/
+  @background: #4D5061;
+  @color-primary: #97DB4F;
+  @color-secondary: #049A8F;
+  @text-color : white;
+  @color-light: white;
+}
+.define-colors() when (@dark = false) {
+  /*colors (LIGHT MODE) */
+  @background: white;
+  @color-primary: rgb(0, 95, 8);
+  @color-secondary: rgb(0, 25, 95);
+  @text-color : black;
+  @color-light: black;
+}
 
 
 // fonts
@@ -182,7 +191,7 @@ div {
 
 
 
-.footer {
+footer {
   //border-top: solid;
   background-color: @color-primary;
   display: flex;

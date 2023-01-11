@@ -1,7 +1,7 @@
 
 import os
-json = {
-    'theme_button':'toggle dark theme',
+english = {
+    'theme_button':'Dark Theme',
     'education_title': 'Education',
     'education_lst' :[
         {
@@ -144,6 +144,155 @@ json = {
         ],
 }
 
+french = {
+    'theme_button':'Thème sombre',
+    'education_title': 'Education',
+    'education_lst' :[
+        {
+        'title'     :'Diplôme d\'ingénieur', 
+        'date'      :'Depuis 2020',
+        'sub_title' :'Télécom ParisTech', 
+        'location'  :'Palaiseau, France', 
+        'desc'      :['Diplôme d\'ingénieur en systèmes embarqués en alternance'],
+        },
+        {
+        'title'     :'Diplôme universitaire de technologie GEII', 
+        'date'      :'De 2018 à 2020',
+        'sub_title' :'IUT Cachan', 
+        'location'  :'Cachan, France', 
+        'desc'      :[
+            'Diplôme en génie électrique et informatique industrielle',
+            '2ème sur 120 étudiants'
+        ],
+        },
+        {
+        'title'     :'Baccalauréat', 
+        'date'      :'De 2015 à 2018',
+        'sub_title' :'Jean Baptiste Say', 
+        'location'  :'Paris, France', 
+        'desc'      :[
+            'Bac en Sciences et Technologies de l\'Ingénieur',
+        ],
+        },
+    ],
+    'proj_title': 'Projets encadrés',
+    'proj_lst' :[
+        {
+        'title'     :'Projet de fin d\'étude', 
+        'date'      :'De 2022 à 2023',
+        'sub_title' :'Générateur de signal configurable SoC', 
+        'location'  :'', 
+        'desc'      :[
+            'Développement d\'une IP FPGA configurable via AXI4 générant un signal (carré ou sinusoïdal)',
+            'Gestion des deux cœurs CPU indépendamment pour la communication Ethernet externe et le calcul interne'],
+        },
+        {
+        'title'     :'Projet de deuxième année', 
+        'date'      :'2020',
+        'sub_title' :'Infrastructure et démonstrations autour du protocole LoRa', 
+        'location'  :'', 
+        'desc'      :[
+            'Test du protocole LoRa, enregistrement et déploiement des passerelles. Guide de projet LoRa avec des exemples pour plusieurs situations',
+        ],
+        },
+        {
+        'title'     :'Projet final IUT', 
+        'date'      :'De 2019 à 2020',
+        'sub_title' :'Coupe de France de la Robotique (compétition nationale)', 
+        'location'  :'', 
+        'desc'      :[
+            'Programmation d\'une solution de débogage Bluetooth en C++',
+            'Développement d\'un capteur de couleur intelligent (test de capteur, programmation en C++, conception de circuit imprimé)'
+        ],
+        }
+    ],
+
+    'work_title': 'Expérience professionnelle',
+    'work_lst' :[
+        {
+        'title'     :'Apprentissage', 
+        'date'      :'Depuis 2021',
+        'sub_title' :'Safran Electronics & Defense', 
+        'location'  :'Massy, France', 
+        'desc'      :['Logiciel embarqué, développement de GUI, SoC, conception de circuit imprimé'],
+        },
+        {
+        'title'     :'Stage', 
+        'date'      :'De avril à juillet 2020',
+        'sub_title' :'Laboratoire C2N', 
+        'location'  :'Palaiseau, France', 
+        'desc'      :[
+            'Prototype de capteur 3 omega',
+        ],
+        },
+    ],
+
+    'language_title': 'Langues',
+    'languages_lst' : [
+        {
+            'name' : 'Français',
+            'level': 100,
+            'desc' : ['Courant (langue maternelle)'],
+        },
+        {
+            'name' : 'Anglais',
+            'level': 90,
+            'desc' : [
+                'Courant et certifié niveau technique C1',
+                'TOEIC : 985 | Linguaskill : 180+'
+                ]
+        },
+        {
+            'name' : 'Espagnol',
+            'level': 30,
+            'desc' : ['Niveau intermédiaire B1'],
+        },
+    ],
+    'skills_title': 'Compétences',
+    'skills_lst' : [
+            {
+                'name' : 'Langages de programmation',
+                'desc' : [
+                    '<strong>Langages de logiciel</strong>  : C, C++, Python, Rust, Java ',
+                    '<strong>HDL</strong>  : Verilog, System Verilog',
+                    '<strong>Développement web</strong>: HTML5, CSS3'
+                    ],
+            },
+            {
+                'name' : 'Systèmes d\'exploitation',
+                'desc' : ['Linux Ubuntu & Debian, Windows 10'],
+            },
+            {
+                'name' : 'Environnements de développement',
+                'desc' : ['VS code, Vivado/Vitis, µVision, MPLAB, Altera, Qt Creator, Eclipse'],
+            },
+        ],
+
+    'interest_title': 'Intérêts',
+    'interest_lst' : [
+            {
+                'name' : 'Escalade',
+                'desc' : [
+                    '3 ans de pratique régulière (principalement le bloc).',
+                    'Niveau 6A / V6. Expériences multiples d\'escalade en falaise'
+                    ],
+            },
+            {
+                'name' : 'Natation',
+                'desc' : ['Entraînement hebdomadaire'],
+            },
+            {
+                'name' : 'Travaux manuels, bricolage',
+                'desc' : ['Construction de PC, conception et câblage de luminaires de plafond'],
+            },
+        ],
+
+}
+
+
+
+
+
 def event(date, title, sub_title, location, desc, space= '                '):
     out =  f'{space}<li class="event" data-date="{date}">\n'
     out += f'{space}    <h3>{title}</h3>\n'
@@ -201,16 +350,14 @@ def save_to_file(text, rel_path):
         file.truncate()
         file.write(text)
 
-html = '''
+
+
+def gen(json, eng=True):
+
+    html = '''
 <head>
     <title>guimath</title>
     <link href="light_theme.css" rel="stylesheet" id="theme-link">
-</head>
-<body>
-'''
-html += f'    <button onclick="lightMode()">{json["theme_button"]}</button>'
-    
-html += '''
     <script>
         const theme = document.querySelector("#theme-link");
         function lightMode() {
@@ -221,27 +368,38 @@ html += '''
             }
         }
     </script>
+</head>
+<body>
+    <div class="headr">
+        <label class="switch right">
+            <input type="checkbox" onclick="lightMode()">
+            <span class="slider round"></span>
+        </label>
 '''
 
+    html += f'        <em class="theme-status">{json["theme_button"]}</em>\n'
+    html += '        <h1>Guilhem Mathieux (WIP)</h1>\n'
+    if eng :
+        html += '        <a href="/french-cv.html" class="lang-link">🇫🇷</a>\n'
+    else :
+        html += '        <a href="/index.html" class="lang-link">🇬🇧</a>\n'
+    html += '    </div>\n'
+    html += '    <div style="display: flex;">\n'
+    html += '        <div class="col1">\n'
+    html += timeline(json['education_title'], json['education_lst'], True)
+    html += timeline(json['proj_title'], json['proj_lst'], False)
+    html += timeline(json['work_title'], json['work_lst'], False)
+    html += '        </div>\n'
+    html += '        <div class="col2">\n'
 
-html += '    <h1>Guilhem Mathieux (WIP)</h1>\n'#TMP
-
-html += '    <div style="display: flex;">\n'
-html += '        <div class="col1">\n'
-html += timeline(json['education_title'], json['education_lst'], True)
-html += timeline(json['proj_title'], json['proj_lst'], False)
-html += timeline(json['work_title'], json['work_lst'], False)
-html += '        </div>\n'
-html += '        <div class="col2">\n'
-
-html += generic_lst(json['language_title'], json['languages_lst'], True)
-html += generic_lst(json['skills_title'], json['skills_lst'], False)
-html += generic_lst(json['interest_title'], json['interest_lst'], False)
-html += '        </div>\n'
-html += '    </div>\n'
+    html += generic_lst(json['language_title'], json['languages_lst'], True)
+    html += generic_lst(json['skills_title'], json['skills_lst'], False)
+    html += generic_lst(json['interest_title'], json['interest_lst'], False)
+    html += '        </div>\n'
+    html += '    </div>\n'
 
 
-html += '''
+    html += '''
     <footer>
         <a href="https://www.facebook.com/guilhem.mathieux">
             <svg viewBox="0 0 24 24" class="slogo facebook">
@@ -266,4 +424,11 @@ html += '''
     </footer>
 </body>
 </html>'''
-save_to_file(html, 'index.html')
+    return html
+
+def main():
+    save_to_file(gen(french, False), 'french-cv.html')
+    save_to_file(gen(english, True), 'index.html')
+
+if __name__ == "__main__" :
+    main()

@@ -2,9 +2,6 @@
 <head>
     <title>guimath</title>
     <link href="light_theme.css" rel="stylesheet" id="theme-link">
-</head>
-<body>
-    <button onclick="lightMode()">toggle dark theme</button>
     <script>
         const theme = document.querySelector("#theme-link");
         function lightMode() {
@@ -15,7 +12,18 @@
             }
         }
     </script>
-    <h1>Guilhem Mathieux (WIP)</h1>
+</head>
+<body>
+    <div class="headr">
+        <label class="switch right">
+            <input type="checkbox" onclick="lightMode()">
+            <span class="slider round"></span>
+        </label>
+        <em class="theme-status">Dark Mode</em>
+        <h1>Guilhem Mathieux (WIP)</h1>
+        <a href="/french-cv.html" class="lang-link">🇫🇷</a>
+    </div>
+    
     <div style="display: flex;">
         <div class="col1">
             <h2 class="first-h2">Education</h2>

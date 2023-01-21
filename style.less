@@ -7,6 +7,7 @@
   }
 }
 
+//TODO add mobile mode
 /* Style modes */
 .define-colors();
 .define-colors() when (@dark = true) {
@@ -42,7 +43,6 @@
 
 body {
   background: @background;
-  font-size: 16px;
   margin:0px;
   // letter
   letter-spacing: 0.5px;   
@@ -53,7 +53,6 @@ body {
 }
 
 p {
-  font-weight: 300;
   margin: 0;
 }
 
@@ -138,8 +137,7 @@ h1 {
       color: fade(@color-light, 40%);    
       content: attr(data-date);
       text-align: right;
-      font-weight: 100;    
-      font-size: 0.9em;
+      
       width: @date;
       font-family: @font-title;
     }

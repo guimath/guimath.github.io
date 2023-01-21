@@ -4,7 +4,6 @@
 /* Base */
 body {
   background: white;
-  font-size: 16px;
   margin: 0px;
   letter-spacing: 0.5px;
   line-height: 1.4em;
@@ -13,7 +12,6 @@ body {
   color: black;
 }
 p {
-  font-weight: 300;
   margin: 0;
 }
 strong {
@@ -88,8 +86,6 @@ h3 {
   color: rgba(0, 0, 0, 0.4);
   content: attr(data-date);
   text-align: right;
-  font-weight: 100;
-  font-size: 0.9em;
   width: 70px;
   font-family: 'Lato', sans-serif;
 }

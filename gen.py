@@ -356,7 +356,7 @@ def gen(json, eng=True):
 
     html = '''
 <head>
-    <title>guimath</title>
+    <title>GuiMath</title>
     <link href="light_theme.css" rel="stylesheet" id="theme-link">
     <script>
         const theme = document.querySelector("#theme-link");
@@ -378,7 +378,7 @@ def gen(json, eng=True):
 '''
 
     html += f'        <em class="theme-status">{json["theme_button"]}</em>\n'
-    html += '        <h1>Guilhem Mathieux (WIP)</h1>\n'
+    html += '        <h1>Guilhem Mathieux</h1>\n'
     if eng :
         html += '        <a href="/french-cv.html" class="lang-link">🇫🇷</a>\n'
     else :

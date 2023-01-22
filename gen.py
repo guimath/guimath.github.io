@@ -384,7 +384,7 @@ def gen(json, eng=True):
     else :
         html += '        <a href="/index.html" class="lang-link">🇬🇧</a>\n'
     html += '    </div>\n'
-    html += '    <div style="display: flex;">\n'
+    html += '    <div class="main-div">\n'
     html += '        <div class="col1">\n'
     html += timeline(json['education_title'], json['education_lst'], True)
     html += timeline(json['proj_title'], json['proj_lst'], False)

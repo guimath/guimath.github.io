@@ -7,7 +7,6 @@
   }
 }
 
-//TODO add mobile mode
 /* Style modes */
 .define-colors();
 .define-colors() when (@dark = true) {
@@ -88,7 +87,7 @@ h1 {
  }
 
 .first-h3 {
-  margin-top: 3px;
+  margin-top: @spacing*0.5;
 }
 .first-h2 {
   margin-top: 0px;
@@ -215,7 +214,9 @@ footer {
   }
 }
 
-
+.main-div {
+  display: flex;
+}
 
 .col1 {
   flex: 60%;
@@ -228,9 +229,8 @@ footer {
   border-left: solid;
   border-left-color: fade(@color-primary, 30%);
   padding-left : 10px;
-  margin-right : 10px;
+  margin-right: 2*@spacing;
   flex: 40%;  
-
 }
 
 
@@ -321,3 +321,24 @@ input:checked + .slider:before {
     padding: 0%;
   }
 }
+
+  /* For Mobile Portrait View */
+@media screen
+  and (orientation: portrait){
+    .main-div {
+      display: block;
+    }
+    .col2 {
+      border-left: 0px;
+      padding-left: @date+@spacing;
+      padding-right: @date+@spacing;
+      margin-left : @spacing;
+      margin-right : @spacing;
+
+      margin-top: @spacing;
+      border-top: solid;
+      border-top-color: fade(@color-primary, 30%);
+      padding-top : @spacing;
+    }
+}
+ 

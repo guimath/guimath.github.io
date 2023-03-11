@@ -5,81 +5,78 @@ english = {
     'education_title': 'Education',
     'education_lst' :[
         {
-        'title'     :'Engineering Diploma', 
-        'date'      :'Since 2020',
-        'sub_title' :'Télécom ParisTech', 
-        'location'  :'Palaiseau, France', 
-        'desc'      :['Engineering Diploma in Embedded Systems work-study programme'],
+            'title'     :'Engineering Diploma', 
+            'date'      :'Since 2020',
+            'sub_title' :'Télécom ParisTech', 
+            'location'  :'Palaiseau, France', 
+            'desc'      :['Engineering Diploma in Embedded Systems work-study programme'],
         },
         {
-        'title'     :'University Diploma of Technology GEII', 
-        'date'      :'From 2018 to 2020',
-        'sub_title' :'IUT Cachan', 
-        'location'  :'Cachan, France', 
-        'desc'      :[
-            'Electrical Engineering and industrial Computing Diploma',
-            'Ranked 2nd out of 120 students'
-        ],
+            'title'     :'University Diploma of Technology GEII', 
+            'date'      :'From 2018 to 2020',
+            'sub_title' :'IUT Cachan', 
+            'location'  :'Cachan, France', 
+            'desc'      :[
+                'Electrical Engineering and industrial Computing Diploma',
+                'Ranked 2nd out of 120 students'
+            ],
         },
         {
-        'title'     :'High School Diploma', 
-        'date'      :'From 2015 to 2018',
-        'sub_title' :'Jean Baptiste Say', 
-        'location'  :'Paris, France', 
-        'desc'      :[
-            'High School Diploma in Engineering Sciences',
-        ],
+            'title'     :'High School Diploma', 
+            'date'      :'From 2015 to 2018',
+            'sub_title' :'Jean Baptiste Say', 
+            'location'  :'Paris, France', 
+            'desc'      :['High School Diploma in Engineering Sciences'],
         },
     ],
     'proj_title': 'Tutored Projects',
     'proj_lst' :[
         {
-        'title'     :'Final Year Project', 
-        'date'      :'From 2022 to 2023',
-        'sub_title' :'SoC Configurable Signal Generator', 
-        'location'  :'', 
-        'desc'      :[
-            'Developement of an FPGA IP configurable via AXI4 generating a signal (square or sinewave)',
-            'Management of the two CPU cores independantly for external ethernet communication and internal computing'],
+            'title'     :'Final Year Project', 
+            'date'      :'From 2022 to 2023',
+            'sub_title' :'SoC Configurable Signal Generator', 
+            'location'  :'', 
+            'desc'      :[
+                'Development of an FPGA IP configurable via AXI4 generating a signal (square or sinewave)',
+                'Management of the two CPU cores independently for external ethernet communication and internal computing'
+            ],
         },
         {
-        'title'     :'Second Year Project', 
-        'date'      :'2020',
-        'sub_title' :'Infrastructure and Demonstrations around the LoRa protocol', 
-        'location'  :'', 
-        'desc'      :[
-            'Testing the LoRa protocol, gateway registering and deployment. LoRa project guide with examples for multiple situations',
-        ],
+            'title'     :'Second Year Project', 
+            'date'      :'2020',
+            'sub_title' :'Infrastructure and Demonstrations around the LoRa protocol', 
+            'location'  :'', 
+            'desc'      : [
+                'Testing the LoRa protocol, gateway registering and deployment. LoRa project guide with examples for multiple situations',
+            ],
         },
         {
-        'title'     :'Final IUT Project', 
-        'date'      :'From 2019 to 2020',
-        'sub_title' :'France Robotics Cup (National competition)', 
-        'location'  :'', 
-        'desc'      :[
-            'Programming of a Bluetooth debugging solution in C++',
-            'Development of an intelligent color sensor (sensor testing, C++ programming, PCB design)',
-        ],
+            'title'     :'Final IUT Project', 
+            'date'      :'From 2019 to 2020',
+            'sub_title' :'France Robotics Cup (National competition)', 
+            'location'  :'', 
+            'desc'      : [
+                'Programming of a Bluetooth debugging solution in C++',
+                'Development of an intelligent color sensor (sensor testing, C++ programming, PCB design)',
+            ],
         },
     ],
     
     'work_title': 'Work Experience',
     'work_lst' :[
         {
-        'title'     :'Apprenticeship', 
-        'date'      :'Since 2021',
-        'sub_title' :'Safran Electronics & Defense', 
-        'location'  :'Massy, France', 
-        'desc'      :['Embedded Software, GUI dev, SoC, PCB design'],
+            'title'     :'Apprenticeship', 
+            'date'      :'Since 2021',
+            'sub_title' :'Safran Electronics & Defense', 
+            'location'  :'Massy, France', 
+            'desc'      :['Embedded Software, GUI dev, SoC, PCB design'],
         },
         {
-        'title'     :'Internship', 
-        'date'      :'From April to July 2020',
-        'sub_title' :'C2N laboratory', 
-        'location'  :'Palaiseau, France', 
-        'desc'      :[
-            '3 omega sensor prototype',
-        ],
+            'title'     :'Internship', 
+            'date'      :'From April to July 2020',
+            'sub_title' :'C2N laboratory', 
+            'location'  :'Palaiseau, France', 
+            'desc'      :['3 omega sensor prototype',],
         },
     ],
 
@@ -96,7 +93,7 @@ english = {
             'desc' : [
                 'Fluent and certified technical C1 level',
                 'TOEIC : 985 | Linguaskill : 180+'
-                ]
+            ]
         },
         {
             'name' : 'Spanish',
@@ -106,124 +103,131 @@ english = {
     ],
     'skills_title': 'Skills',
     'skills_lst' : [
-            {
-                'name' : 'Programming Languages',
-                'desc' : [
-                    '<strong>Software Language</strong>  : C, C++, Python, Rust, Java ',
-                    '<strong>HDL</strong>  : Verilog, System Verilog',
-                    '<strong>Web Dev</strong>: HTML5, CSS3'
-                    ],
-            },
-            {
-                'name' : 'Operating Systems',
-                'desc' : ['Linux Ubuntu & Debian, Windows 10'],
-            },
-            {
-                'name' : 'Developement environment',
-                'desc' : ['VS code, Vivado/Vitis, µVision, MPLAB, Altera, Qt Creator, Eclipse'],
-            },
-        ],
+        {
+            'name' : 'Programming Languages',
+            'desc' : [
+                '<strong>Software Language</strong>  : C, C++, Python, Rust, Java ',
+                '<strong>HDL</strong>  : Verilog, System Verilog',
+                '<strong>Web Dev</strong>: HTML5, CSS3'
+            ],
+        },
+        {
+            'name' : 'Operating Systems',
+            'desc' : ['Linux Ubuntu & Debian, Windows 10'],
+        },
+        {
+            'name' : 'Developement environment',
+            'desc' : ['VS code, Vivado/Vitis, µVision, MPLAB, Altera, Qt Creator, Eclipse'],
+        },
+    ],
 
     'interest_title': 'Interests',
     'interest_lst' : [
-            {
-                'name' : 'Climbing',
-                'desc' : [
-                    '3 years of regular practice (mainly bouldering).',
-                    '6A / V6 level Multiple cliff climbing experiences'
-                    ],
-            },
-            {
-                'name' : 'Swimming',
-                'desc' : ['Weekly training'],
-            },
-            {
-                'name' : 'Handiwork, DIY',
-                'desc' : ['Building PCs, Ceiling light design and wiring'],
-            },
-        ],
+        {
+            'name' : 'Competitive Programming',
+            'desc' : [
+                'Participated in the regional selection phase for ICPC: <a href="https://swerc.eu/2022/about/" target="_blank">SWERC</a> 2023 in Milan',
+            ],
+        },
+        {
+            'name' : 'Climbing',
+            'desc' : [
+                '3 years of regular practice (mainly bouldering).',
+                '6A / V6 level Multiple cliff climbing experiences'
+            ],
+        },
+        {
+            'name' : 'Swimming',
+            'desc' : ['Weekly training'],
+        },
+        {
+            'name' : 'Handiwork, DIY',
+            'desc' : ['Building PCs, Ceiling light design and wiring'],
+        },
+    ],
 }
 
 french = {
     'theme_button':'Thème sombre',
     'education_title': 'Education',
-    'education_lst' :[
+    'education_lst' : [
         {
-        'title'     :'Diplôme d\'ingénieur', 
-        'date'      :'Depuis 2020',
-        'sub_title' :'Télécom ParisTech', 
-        'location'  :'Palaiseau, France', 
-        'desc'      :['Diplôme d\'ingénieur en systèmes embarqués en alternance'],
+            'title'     :'Diplôme d\'ingénieur', 
+            'date'      :'Depuis 2020',
+            'sub_title' :'Télécom ParisTech', 
+            'location'  :'Palaiseau, France', 
+            'desc'      :['Diplôme d\'ingénieur en systèmes embarqués en alternance'],
         },
         {
-        'title'     :'Diplôme universitaire de technologie GEII', 
-        'date'      :'De 2018 à 2020',
-        'sub_title' :'IUT Cachan', 
-        'location'  :'Cachan, France', 
-        'desc'      :[
-            'Diplôme en génie électrique et informatique industrielle',
-            '2ème sur 120 étudiants'
-        ],
+            'title'     :'Diplôme universitaire de technologie GEII', 
+            'date'      :'De 2018 à 2020',
+            'sub_title' :'IUT Cachan', 
+            'location'  :'Cachan, France', 
+            'desc'      :[
+                'Diplôme en génie électrique et informatique industrielle',
+                '2ème sur 120 étudiants'
+            ],
         },
         {
-        'title'     :'Baccalauréat', 
-        'date'      :'De 2015 à 2018',
-        'sub_title' :'Jean Baptiste Say', 
-        'location'  :'Paris, France', 
-        'desc'      :[
-            'Bac en Sciences et Technologies de l\'Ingénieur',
-        ],
+            'title'     :'Baccalauréat', 
+            'date'      :'De 2015 à 2018',
+            'sub_title' :'Jean Baptiste Say', 
+            'location'  :'Paris, France', 
+            'desc'      :[
+                'Bac en Sciences et Technologies de l\'Ingénieur',
+            ],
         },
     ],
     'proj_title': 'Projets encadrés',
-    'proj_lst' :[
+    'proj_lst' : [
         {
-        'title'     :'Projet de fin d\'étude', 
-        'date'      :'De 2022 à 2023',
-        'sub_title' :'Générateur de signal configurable SoC', 
-        'location'  :'', 
-        'desc'      :[
-            'Développement d\'une IP FPGA configurable via AXI4 générant un signal (carré ou sinusoïdal)',
-            'Gestion des deux cœurs CPU indépendamment pour la communication Ethernet externe et le calcul interne'],
+            'title'     :'Projet de fin d\'étude', 
+            'date'      :'De 2022 à 2023',
+            'sub_title' :'Générateur de signal configurable SoC', 
+            'location'  :'', 
+            'desc'      :[
+                'Développement d\'une IP FPGA configurable via AXI4 générant un signal (carré ou sinusoïdal)',
+                'Gestion des deux cœurs CPU indépendamment pour la communication Ethernet externe et le calcul interne'
+            ],
         },
         {
-        'title'     :'Projet de deuxième année', 
-        'date'      :'2020',
-        'sub_title' :'Infrastructure et démonstrations autour du protocole LoRa', 
-        'location'  :'', 
-        'desc'      :[
-            'Test du protocole LoRa, enregistrement et déploiement des passerelles. Guide de projet LoRa avec des exemples pour plusieurs situations',
-        ],
+            'title'     :'Projet de deuxième année', 
+            'date'      :'2020',
+            'sub_title' :'Infrastructure et démonstrations autour du protocole LoRa', 
+            'location'  :'', 
+            'desc'      :[
+                'Test du protocole LoRa, enregistrement et déploiement des passerelles. Guide de projet LoRa avec des exemples pour plusieurs situations',
+            ],
         },
         {
-        'title'     :'Projet final IUT', 
-        'date'      :'De 2019 à 2020',
-        'sub_title' :'Coupe de France de la Robotique (compétition nationale)', 
-        'location'  :'', 
-        'desc'      :[
-            'Programmation d\'une solution de débogage Bluetooth en C++',
-            'Développement d\'un capteur de couleur intelligent (test de capteur, programmation en C++, conception de circuit imprimé)'
-        ],
+            'title'     :'Projet final IUT', 
+            'date'      :'De 2019 à 2020',
+            'sub_title' :'Coupe de France de la Robotique (compétition nationale)', 
+            'location'  :'', 
+            'desc'      :[
+                'Programmation d\'une solution de débogage Bluetooth en C++',
+                'Développement d\'un capteur de couleur intelligent (test de capteur, programmation en C++, conception de circuit imprimé)'
+            ],
         }
     ],
 
     'work_title': 'Expérience professionnelle',
-    'work_lst' :[
+    'work_lst' : [
         {
-        'title'     :'Apprentissage', 
-        'date'      :'Depuis 2021',
-        'sub_title' :'Safran Electronics & Defense', 
-        'location'  :'Massy, France', 
-        'desc'      :['Logiciel embarqué, développement de GUI, SoC, conception de circuit imprimé'],
+            'title'     :'Apprentissage', 
+            'date'      :'Depuis 2021',
+            'sub_title' :'Safran Electronics & Defense', 
+            'location'  :'Massy, France', 
+            'desc'      :['Logiciel embarqué, développement de GUI, SoC, conception de circuit imprimé'],
         },
         {
-        'title'     :'Stage', 
-        'date'      :'De avril à juillet 2020',
-        'sub_title' :'Laboratoire C2N', 
-        'location'  :'Palaiseau, France', 
-        'desc'      :[
-            'Prototype de capteur 3 omega',
-        ],
+            'title'     :'Stage', 
+            'date'      :'De avril à juillet 2020',
+            'sub_title' :'Laboratoire C2N', 
+            'location'  :'Palaiseau, France', 
+            'desc'      :[
+                'Prototype de capteur 3 omega',
+            ],
         },
     ],
 
@@ -240,7 +244,7 @@ french = {
             'desc' : [
                 'Courant et certifié niveau technique C1',
                 'TOEIC : 985 | Linguaskill : 180+'
-                ]
+            ]
         },
         {
             'name' : 'Espagnol',
@@ -250,42 +254,48 @@ french = {
     ],
     'skills_title': 'Compétences',
     'skills_lst' : [
-            {
-                'name' : 'Langages de programmation',
-                'desc' : [
-                    '<strong>Langages de logiciel</strong>  : C, C++, Python, Rust, Java ',
-                    '<strong>HDL</strong>  : Verilog, System Verilog',
-                    '<strong>Développement web</strong>: HTML5, CSS3'
-                    ],
-            },
-            {
-                'name' : 'Systèmes d\'exploitation',
-                'desc' : ['Linux Ubuntu & Debian, Windows 10'],
-            },
-            {
-                'name' : 'Environnements de développement',
-                'desc' : ['VS code, Vivado/Vitis, µVision, MPLAB, Altera, Qt Creator, Eclipse'],
-            },
-        ],
+        {
+            'name' : 'Langages de programmation',
+            'desc' : [
+                '<strong>Langages de logiciel</strong>  : C, C++, Python, Rust, Java ',
+                '<strong>HDL</strong>  : Verilog, System Verilog',
+                '<strong>Développement web</strong>: HTML5, CSS3'
+            ],
+        },
+        {
+            'name' : 'Systèmes d\'exploitation',
+            'desc' : ['Linux Ubuntu & Debian, Windows 10'],
+        },
+        {
+            'name' : 'Environnements de développement',
+            'desc' : ['VS code, Vivado/Vitis, µVision, MPLAB, Altera, Qt Creator, Eclipse'],
+        },
+    ],
 
     'interest_title': 'Intérêts',
     'interest_lst' : [
-            {
-                'name' : 'Escalade',
-                'desc' : [
-                    '3 ans de pratique régulière (principalement le bloc).',
-                    'Niveau 6A / V6. Expériences multiples d\'escalade en falaise'
-                    ],
-            },
-            {
-                'name' : 'Natation',
-                'desc' : ['Entraînement hebdomadaire'],
-            },
-            {
-                'name' : 'Travaux manuels, bricolage',
-                'desc' : ['Construction de PC, conception et câblage de luminaires de plafond'],
-            },
-        ],
+        {
+            'name' : 'Programmation Competitive',
+            'desc' : [
+                'Participation à la phase de selection pour l\'ICPC : <a href="https://swerc.eu/2022/about/" target="_blank">SWERC</a> 2023 à Milan',
+            ],
+        },
+        {
+            'name' : 'Escalade',
+            'desc' : [
+                '3 ans de pratique régulière (principalement le bloc).',
+                'Niveau 6A / V6. Expériences multiples d\'escalade en falaise'
+            ],
+        },
+        {
+            'name' : 'Natation',
+            'desc' : ['Entraînement hebdomadaire'],
+        },
+        {
+            'name' : 'Travaux manuels, bricolage',
+            'desc' : ['Construction de PC, conception et câblage de luminaires de plafond'],
+        },
+    ],
 
 }
 
@@ -380,9 +390,9 @@ def gen(json, eng=True):
     html += f'        <em class="theme-status">{json["theme_button"]}</em>\n'
     html += '        <h1>Guilhem Mathieux</h1>\n'
     if eng :
-        html += '        <a href="/french-cv.html" class="lang-link">🇫🇷</a>\n'
+        html += '        <a href="/french-cv.html" class="lang-link title="French version">🇫🇷</a>\n'
     else :
-        html += '        <a href="/index.html" class="lang-link">🇬🇧</a>\n'
+        html += '        <a href="/index.html" class="lang-link" title="Version anglaise">🇬🇧</a>\n'
     html += '    </div>\n'
     html += '    <div class="main-div">\n'
     html += '        <div class="col1">\n'

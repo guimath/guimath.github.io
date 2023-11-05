@@ -128,14 +128,18 @@ footer {
   background-color: #2C5530;
   display: flex;
   justify-content: space-between;
-  position: relative;
+  align-items: center;
   padding: 10px;
   margin: 0px;
-  margin-top: 10px;
+  height: 3vh;
+  margin-top: -3vh;
+  padding-top: 0;
+  padding-bottom: 0;
   padding-right: 10%;
   padding-left: 10%;
 }
 footer a {
+  font-size: 1.03em;
   color: white;
   text-decoration: none;
 }
@@ -147,7 +151,13 @@ footer .slogo {
 footer .linkedin {
   vertical-align: -5px;
 }
+.main-div-cont {
+  min-height: 90vh;
+}
 .main-div {
+  padding: 0;
+  margin: 0;
+  padding-bottom: 4vh;
   display: flex;
 }
 .col1 {
@@ -213,9 +223,9 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 .theme-status {
-  position: absolute;
-  top: 32px;
-  left: 90px;
+  font-style: italic;
+  vertical-align: middle;
+  padding-top: 20%;
 }
 .lang-link {
   margin: 15px;
@@ -227,7 +237,7 @@ input:checked + .slider:before {
   display: flex;
   justify-content: space-between;
   position: relative;
-  height: 83px;
+  height: 10vh;
   align-items: center;
 }
 .headr h1 {
@@ -248,5 +258,9 @@ input:checked + .slider:before {
     border-top: solid;
     border-top-color: rgba(44, 85, 48, 0.3);
     padding-top: 15px;
+  }
+  footer {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }

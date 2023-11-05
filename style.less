@@ -187,19 +187,24 @@ div {
 
 
 
-
+@footer-height : 3vh;
+@logo-height : 2.5vh;
 footer {
   //border-top: solid;
   background-color: @color-primary;
   display: flex;
   justify-content: space-between;
-  position: relative;
+  align-items: center;
   padding: 10px;
   margin:0px;
-  margin-top: 10px;
+  height: @footer-height;
+  margin-top: -@footer-height;
+  padding-top: 0;
+  padding-bottom: 0;
   padding-right: 10%;
   padding-left: 10%;
   a {
+    font-size: 1.03em;
     color: @background;
     text-decoration: none;//remove underline
   }
@@ -214,7 +219,13 @@ footer {
   }
 }
 
+.main-div-cont {
+  min-height: 90vh;
+}
 .main-div {
+  padding: 0;
+  margin: 0;
+  padding-bottom: @footer-height + 1vh;
   display: flex;
 }
 
@@ -294,10 +305,9 @@ input:checked + .slider:before {
 }
 
 .theme-status {
-  position: absolute;
-  top : @switch-height*0.5 + @spacing ;
-  left: @switch-width + 2*@spacing;
-
+  font-style: italic;
+  vertical-align: middle;
+  padding-top: 20%;
 }
 
 
@@ -314,7 +324,9 @@ input:checked + .slider:before {
   display: flex;
   justify-content: space-between;
   position: relative;
-  height: @spacing + @switch-height*2;
+  //height: @spacing + @switch-height*2;
+  height: 10vh;
+
   align-items: center;
   h1 {
     //margin: @spacing+5px;
@@ -340,5 +352,10 @@ input:checked + .slider:before {
       border-top-color: fade(@color-primary, 30%);
       padding-top : @spacing;
     }
+  footer {
+    padding-left: @spacing;
+    padding-right: @spacing;
+  }
+
 }
  

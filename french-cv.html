@@ -1,6 +1,7 @@
 
 <head>
     <title>GuiMath</title>
+    <link rel="icon" href="img/favicon.svg">
     <link href="light_theme.css" rel="stylesheet" id="theme-link">
     <script>
         const theme = document.querySelector("#theme-link");
@@ -15,15 +16,17 @@
 </head>
 <body>
     <div class="headr">
-        <label class="switch right">
-            <input type="checkbox" onclick="lightMode()">
-            <span class="slider round"></span>
-        </label>
-        <em class="theme-status">Thème sombre</em>
+        <div>
+            <label class="switch right">
+                <input type="checkbox" onclick="lightMode()">
+                <span class="slider round"></span>
+            </label>
+            <span class="theme-status">Thème sombre</span>
+        </div>
         <h1>Guilhem Mathieux</h1>
         <a href="/index.html" class="lang-link" title="Version anglaise">🇬🇧</a>
     </div>
-    <div class="main-div">
+    <div class="main-div-cont"> <div class="main-div">
         <div class="col1">
             <h2 class="first-h2">Education</h2>
             <ul class="timeline">
@@ -142,7 +145,7 @@
             </li>
             </ul>
         </div>
-    </div>
+    </div></div>
 
     <footer>
         <a href="https://www.facebook.com/guilhem.mathieux">

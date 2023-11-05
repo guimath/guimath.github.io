@@ -5,8 +5,15 @@ english = {
     'education_title': 'Education',
     'education_lst' :[
         {
+            'title'     :'MSc by Research', 
+            'date'      :'Since 2023',
+            'sub_title' :'National University of Singapore', 
+            'location'  :'Singapore', 
+            'desc'      :['Double degree Research oriented Computer Science masters'],
+        },
+        {
             'title'     :'Engineering Diploma', 
-            'date'      :'Since 2020',
+            'date'      :'From 2020 to 2023',
             'sub_title' :'Télécom ParisTech', 
             'location'  :'Palaiseau, France', 
             'desc'      :['Engineering Diploma in Embedded Systems work-study programme'],
@@ -21,13 +28,13 @@ english = {
                 'Ranked 2nd out of 120 students'
             ],
         },
-        {
-            'title'     :'High School Diploma', 
-            'date'      :'From 2015 to 2018',
-            'sub_title' :'Jean Baptiste Say', 
-            'location'  :'Paris, France', 
-            'desc'      :['High School Diploma in Engineering Sciences'],
-        },
+        # {
+        #     'title'     :'High School Diploma', 
+        #     'date'      :'From 2015 to 2018',
+        #     'sub_title' :'Jean Baptiste Say', 
+        #     'location'  :'Paris, France', 
+        #     'desc'      :['High School Diploma in Engineering Sciences'],
+        # },
     ],
     'proj_title': 'Tutored Projects',
     'proj_lst' :[
@@ -144,6 +151,10 @@ english = {
             'name' : 'Handiwork, DIY',
             'desc' : ['Building PCs, Ceiling light design and wiring'],
         },
+        {
+            'name' : 'Photography',
+            'desc' : ['Amateur photographer (<a href="https://www.instagram.com/guilhemphotography/" target="_blank">Link to some of my photos</a>)']
+        }
     ],
 }
 
@@ -367,6 +378,7 @@ def gen(json, eng=True):
     html = '''
 <head>
     <title>GuiMath</title>
+    <link rel="icon" href="img/favicon.svg">
     <link href="light_theme.css" rel="stylesheet" id="theme-link">
     <script>
         const theme = document.querySelector("#theme-link");
@@ -381,20 +393,22 @@ def gen(json, eng=True):
 </head>
 <body>
     <div class="headr">
-        <label class="switch right">
-            <input type="checkbox" onclick="lightMode()">
-            <span class="slider round"></span>
-        </label>
+        <div>
+            <label class="switch right">
+                <input type="checkbox" onclick="lightMode()">
+                <span class="slider round"></span>
+            </label>
 '''
 
-    html += f'        <em class="theme-status">{json["theme_button"]}</em>\n'
-    html += '        <h1>Guilhem Mathieux</h1>\n'
+    html += f'            <span class="theme-status">{json["theme_button"]}</span>\n'
+    html += f'        </div>\n'
+    html +=  '        <h1>Guilhem Mathieux</h1>\n'
     if eng :
         html += '        <a href="/french-cv.html" class="lang-link title="French version">🇫🇷</a>\n'
     else :
         html += '        <a href="/index.html" class="lang-link" title="Version anglaise">🇬🇧</a>\n'
     html += '    </div>\n'
-    html += '    <div class="main-div">\n'
+    html += '    <div class="main-div-cont"> <div class="main-div">\n'
     html += '        <div class="col1">\n'
     html += timeline(json['education_title'], json['education_lst'], True)
     html += timeline(json['proj_title'], json['proj_lst'], False)
@@ -406,7 +420,7 @@ def gen(json, eng=True):
     html += generic_lst(json['skills_title'], json['skills_lst'], False)
     html += generic_lst(json['interest_title'], json['interest_lst'], False)
     html += '        </div>\n'
-    html += '    </div>\n'
+    html += '    </div></div>\n'
 
 
     html += '''

@@ -28,86 +28,130 @@
 
 
 // fonts
-@font-title: 'Lato', sans-serif;
-@font-text: 'Arial', sans-serif;
+@font-title: Lato, sans-serif;
+@font-sub-title: Arial, sans-serif;
+@font-text: Arial, sans-serif;
+
 // timeline
-@spacing: 15px; 
+@spacing: 15px;
 @radius: 4px;
 @date: 70px;
-@dotborder: 4px;
-@dot: 5px;
 @line: 4px;
+@dot: 15px;
+
+// space partitions
+@header-height: 15vh;
+@footer-height : 3vh;
+@logo-height : 2.5vh;
+@main-div-height: 99vh - @header-height;
+
+@main-side-width: 65%;
+
+// Formation = H2
+// MSc in CS = H3
+// National University of Singapore = strong | Singapore = i
 
 /* Base */
-
 body {
-  background: @background;
+  a {
+    color: @color-secondary;
+    text-decoration: underline;
+  }
+  background: @color-primary;
+  // background: @background;
   margin:0px;
   // letter
-  letter-spacing: 0.5px;   
+  letter-spacing: 0.5px;
   line-height: 1.4em;
-  font-size: 1.03em;   
-  font-family: @font-text;  
+  font-size: 1.03em;
+  font-family: @font-text;
   color : @text-color;
+  p {
+    margin: 0;
+  }
+
+  strong {
+    font-weight: 600;
+    color : @color-primary;
+  }
+
+  i {
+    color : @color-primary;
+  }
+
+
+  h2 {
+    color: @color-primary;
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+  }
+
+  h3 {
+    color: @color-secondary;
+    font-family:  @font-sub-title;
+    margin-bottom: 0%;
+  }
+  .first-h2 {
+    margin-top: 0px;
+  }
+  .first-h3 {
+    margin-top: @spacing*0.5;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  div {
+    margin: 0;
+    padding: 0;
+  }
+
+  .main-div-cont {
+    background: @background;
+    margin:0;
+    padding-top: @spacing;
+    min-height: @main-div-height;
+  }
+  .main-div {
+    padding: 0;
+    margin: 0;
+    padding-bottom: @footer-height + 1vh;
+    display: flex;
+  }
+  
+  .col1 {
+    flex: @main-side-width;
+    h2 {
+      margin-left: @date+2*@spacing; // aligning w time line
+    }
+  
+  }
+  .col2 {
+    border-left: solid;
+    border-left-color: fade(@color-primary, 30%);
+    padding-left : 10px;
+    margin-right: 2*@spacing;
+    flex: 100% - @main-side-width;
+  }
 }
 
-p {
-  margin: 0;
-}
 
-strong {
-  font-weight: 600;
-  color : @color-primary;
-}
-
-i {
-  color : @color-primary;
-}
-
-h1 {
-  font-family: @font-title;
-   text-align: center;
-   color: @color-primary; 
-   padding: 0px;
-   margin: 10px;
-   margin-bottom: 25px;
- }
- 
- h2 {
-   text-align: left;
-   color: @color-primary;
-   margin-bottom: 0%; 
-   padding-bottom: 0%; 
- }
-
- h3 {
-   color: @color-secondary;
-   font-family: Arial, sans-serif;
-   margin-bottom: 0%;
- }
-
-.first-h3 {
-  margin-top: @spacing*0.5;
-}
-.first-h2 {
-  margin-top: 0px;
-}
 
 /* Timeline */
 .timeline {
   border-left: @line solid fade(@color-primary, 70%);
   border-bottom-right-radius: @radius;
-  border-top-right-radius: @radius;    
-  /*background: fade(@color-light, 3%);
-  color: fade(black, 80%);*/
+  border-top-right-radius: @radius;
   position: relative;
-  margin: @spacing auto;  
-  padding: @spacing;   
+  margin: @spacing;
+  margin-top: 0.5*@spacing;
+  padding: @spacing;
   list-style: none;
-  text-align: left;  
-  width: 70%; 
+  text-align: left;
   margin-left: @date + 2*@spacing; // space for the date
-  
 
   h3 {
     margin-top: 0%; // removes big space at the top
@@ -116,13 +160,13 @@ h1 {
   .event {
     border-bottom: 1px solid fade(@color-primary, 30%); //separator
     padding-bottom: (@spacing * 0.5);
-    margin-bottom: @spacing;  
+    margin-bottom: @spacing;
     position: relative;
 
-    &:last-of-type { 
+    &:last-of-type { // no separator on last
       padding-bottom: 0;
-      margin-bottom: 0; 
-      border: none;      
+      margin-bottom: 0;
+      border: none;
     }
 
     &:before, &:after {
@@ -132,42 +176,32 @@ h1 {
     }
 
     &:before {
-      left: ((((@date * 0.6) + @spacing + @line + @dot + (@dotborder * 2)) * 1.5) * -1 )+10;    
-      color: fade(@color-light, 40%);    
+      left: ((((@date * 0.6) + @spacing + @line + @spacing) * 1.5) * -1 )+10;
+      color: fade(@color-light, 50%);
       content: attr(data-date);
       text-align: right;
-      
+
       width: @date;
       font-family: @font-title;
     }
 
     &:after {
-      box-shadow: 0 0 0 @dotborder fade(@color-secondary,100%);    
-      left: (@spacing + @line + (@dot * 0.1)) * -1;        
-      border-color: @color-secondary;    
-      background-color: @color-secondary;    
-      border-radius: 50%;  
+      left: (@spacing + @line + 5px) * -1;
+      border-color: @color-secondary;
+      background-color: @color-secondary;
+      border-radius: 50%;
+      border: none;
       height: @dot;
       width: @dot;
       content: "";
-      top: 8px;
+      top: 4px;
     }
   }
 }
 
 
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
 
-div {
-  margin: 0;
-  padding: 0;
-}
-
-/* proficency bar*/
+/* proficiency bar*/
 .progress-bar {
   position: relative;
   height: 5px;
@@ -184,13 +218,81 @@ div {
   border-radius: 5px;
 }
 
+/* Header */
+.headr {
+  background-color: @color-primary;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  height: @header-height;
+  padding-right: @spacing;
+  padding-left: @spacing;
+  align-items: center;
+  * {
+    color:@background;
+  }
+  
+  .img-and-title{ 
+    height: 100%;
+    display: flex;
+
+    .image-container {
+      // width:@header-height;
+      height:@header-height; 
+      overflow: hidden;
+      margin:0; 
+      margin-right: @spacing;
+      padding:0; 
+      img{
+        width: 100%;     
+        height: 100%; 
+        object-fit: cover;
+      }
+    }
+
+    .main_title{
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+
+      h1 {
+        margin: 0;
+        padding: 0;
+      }
+    
+      h3{
+        color: fade(@background, 70%);
+      }
+    }
+  }
 
 
+  .infos-div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    .icon-header {
+      padding: 0;
+      vertical-align: middle;
+      height: 25px;
+      width: 25px;
+      fill: @background;
+    }
+   
+    .nf {
+      fill: none;
+      stroke:@background;
+      stroke-width:2px;
+      stroke-linecap:"round";
+      stroke-linejoin:"round";
+    }
+  }
+}
 
-@footer-height : 3vh;
-@logo-height : 2.5vh;
+/* Footer */
 footer {
-  //border-top: solid;
   background-color: @color-primary;
   display: flex;
   justify-content: space-between;
@@ -203,6 +305,7 @@ footer {
   padding-bottom: 0;
   padding-right: 10%;
   padding-left: 10%;
+  
   a {
     font-size: 1.03em;
     color: @background;
@@ -213,126 +316,82 @@ footer {
     height: 24px;
     vertical-align: -7px;
   }
-  
+
   .linkedin {
     vertical-align: -5px;
   }
 }
 
-.main-div-cont {
-  min-height: 90vh;
-}
-.main-div {
-  padding: 0;
-  margin: 0;
-  padding-bottom: @footer-height + 1vh;
+
+
+@switch-width:40px;
+@switch-height:20px;
+@switch-inner-space: 4px;
+/* Control */
+.switches{
   display: flex;
-}
-
-.col1 {
-  flex: 60%;
-  
-  h2 {
-    margin-left: @date+2*@spacing; // aligning w time line
-  }
-}
-.col2 {
-  border-left: solid;
-  border-left-color: fade(@color-primary, 30%);
-  padding-left : 10px;
-  margin-right: 2*@spacing;
-  flex: 40%;  
-}
-
-
-@switch-width:60px;
-@switch-height:34px;
-/* The switch - the box around the slider */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: @switch-width;
-  height: @switch-height;
-  margin: @spacing;
-  /* Hide default HTML checkbox */
-  input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-}
-
-
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: @color-primary;
-  -webkit-transition: .4s;
-  transition: .4s;
-
-  &:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: @background;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-
-  /* Rounded sliders */
-  &.round {
-    border-radius: 34px;
-    &:before {
-      border-radius: 50%;
+  justify-content: space-between;
+  .switch {
+    position: relative;
+    top:2px;// TODO remove fixed 
+    display: inline-block;
+    width: @switch-width;
+    height: @switch-height;
+    // Hide default HTML checkbox 
+    input {
+      opacity: 0;
+      width: 0;
+      height: 0;
     }
   }
   
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-.theme-status {
-  font-style: italic;
-  vertical-align: middle;
-  padding-top: 20%;
-}
-
-
-.lang-link {
-  margin: @spacing;
-  text-align: end;
-  text-decoration: none;
-  font-size: 20px;
-  //margin: @spacing+5px;
-}
-
-.headr {
-  //border-top: solid;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  //height: @spacing + @switch-height*2;
-  height: 10vh;
-
-  align-items: center;
-  h1 {
-    //margin: @spacing+5px;
-    padding: 0%;
+  .slider {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: @color-light;
+    -webkit-transition: .4s;
+    transition: .4s;
+  
+    &:before {
+      position: absolute;
+      content: "";
+      height: @switch-height - @switch-inner-space*2;
+      width: @switch-height - @switch-inner-space*2;
+      left: @switch-inner-space;
+      bottom: @switch-inner-space;
+      background-color: @background;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+  
+  
+    /* Rounded sliders */
+    &.round {
+      border-radius: @switch-height;
+      &:before {
+        border-radius: 50%;
+      }
+    }
+  
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(@switch-width - @switch-height);
+    -ms-transform: translateX(@switch-width - @switch-height);
+    transform: translateX(@switch-width - @switch-height);
+  }
+  
+  .lang-link {
+    align-content: center;
+    text-decoration: none;
+    font-size: 20px;
   }
 }
+
 
   /* For Mobile Portrait View */
 @media screen
@@ -358,4 +417,5 @@ input:checked + .slider:before {
   }
 
 }
- 
+
+

@@ -2,7 +2,7 @@
 <head>
     <title>GuiMath</title>
     <link rel="icon" href="img/favicon.svg">
-    <link href="light_theme.css" rel="stylesheet" id="theme-link">
+    <link href=light_theme.css rel="stylesheet" id="theme-link">
     <script>
         const theme = document.querySelector("#theme-link");
         function lightMode() {
@@ -16,68 +16,104 @@
 </head>
 <body>
     <div class="headr">
-        <div>
-            <label class="switch right">
-                <input type="checkbox" onclick="lightMode()">
-                <span class="slider round"></span>
-            </label>
-            <span class="theme-status">Thème sombre</span>
+        <div class="img-and-title">
+            <div class="image-container">
+                <img src="img/portrait.webp" alt="Image">
+            </div>
+            <div class="main_title">
+                <p><h1>Guilhem Mathieux</h1></p>
+                <p><h3>Ingénieur systèmes embarqués</h3></p>
+            </div>
         </div>
-        <h1>Guilhem Mathieux</h1>
-        <a href="/index.html" class="lang-link" title="Version anglaise">🇬🇧</a>
-    </div>
-    <div class="main-div-cont"> <div class="main-div">
+        <div class="infos-div">
+            <div class="switches">
+                <label class="switch" title="Changer de thème">
+                    <input type="checkbox" onclick="lightMode()">
+                    <span class="slider round"></span>
+                </label>
+                <a href="/index.html" class="lang-link" title="English version">🇬🇧</a>
+            </div>
+
+            <p>
+                <svg class="icon-header" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.75 5.25L3 6V18L3.75 18.75H20.25L21 18V6L20.25 5.25H3.75ZM4.5 7.6955V17.25H19.5V7.69525L11.9999 14.5136L4.5 7.6955ZM18.3099 6.75H5.68986L11.9999 12.4864L18.3099 6.75Z"/>
+                </svg>
+                <a href="mailto:guilhem.mathieux.pro@gmail.com">guilhem.mathieux.pro@gmail.com</a>
+            </p>
+            <p>
+                <svg class="icon-header nf" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 5.5C3 14.0604 9.93959 21 18.5 21C18.8862 21 19.2691 20.9859 19.6483 20.9581C20.0834 20.9262 20.3009 20.9103 20.499 20.7963C20.663 20.7019 20.8185 20.5345 20.9007 20.364C21 20.1582 21 19.9181 21 19.438V16.6207C21 16.2169 21 16.015 20.9335 15.842C20.8749 15.6891 20.7795 15.553 20.6559 15.4456C20.516 15.324 20.3262 15.255 19.9468 15.117L16.74 13.9509C16.2985 13.7904 16.0777 13.7101 15.8683 13.7237C15.6836 13.7357 15.5059 13.7988 15.3549 13.9058C15.1837 14.0271 15.0629 14.2285 14.8212 14.6314L14 16C11.3501 14.7999 9.2019 12.6489 8 10L9.36863 9.17882C9.77145 8.93713 9.97286 8.81628 10.0942 8.64506C10.2012 8.49408 10.2643 8.31637 10.2763 8.1317C10.2899 7.92227 10.2096 7.70153 10.0491 7.26005L8.88299 4.05321C8.745 3.67376 8.67601 3.48403 8.55442 3.3441C8.44701 3.22049 8.31089 3.12515 8.15802 3.06645C7.98496 3 7.78308 3 7.37932 3H4.56201C4.08188 3 3.84181 3 3.63598 3.09925C3.4655 3.18146 3.29814 3.33701 3.2037 3.50103C3.08968 3.69907 3.07375 3.91662 3.04189 4.35173C3.01413 4.73086 3 5.11378 3 5.5Z"/>                
+                </svg>
+                <a href="tel:+33673779284">(+33) <strong>6 73 77 92 84</strong></a>
+            </p>
+            <p>
+                <svg class="icon-header nf" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 3V6M17 3V6M7.10002 20C7.56329 17.7178 9.58104 16 12 16C14.419 16 16.4367 17.7178 16.9 20M6.2 21H17.8C18.9201 21 19.4802 21 19.908 20.782C20.2843 20.5903 20.5903 20.2843 20.782 19.908C21 19.4802 21 18.9201 21 17.8V8.2C21 7.07989 21 6.51984 20.782 6.09202C20.5903 5.71569 20.2843 5.40973 19.908 5.21799C19.4802 5 18.9201 5 17.8 5H6.2C5.0799 5 4.51984 5 4.09202 5.21799C3.71569 5.40973 3.40973 5.71569 3.21799 6.09202C3 6.51984 3 7.07989 3 8.2V17.8C3 18.9201 3 19.4802 3.21799 19.908C3.40973 20.2843 3.71569 20.5903 4.09202 20.782C4.51984 21 5.07989 21 6.2 21ZM14 11C14 12.1046 13.1046 13 12 13C10.8954 13 10 12.1046 10 11C10 9.89543 10.8954 9 12 9C13.1046 9 14 9.89543 14 11Z"/>
+                </svg>
+              24 ans
+            </p>
+        </div>
+     </div>
+     <div class="main-div-cont"> <div class="main-div">
         <div class="col1">
-            <h2 class="first-h2">Education</h2>
+            <h2 class="first-h2">Formation</h2>
             <ul class="timeline">
-                <li class="event" data-date="Depuis 2020">
+                <li class="event" data-date="De 2023 à 2024">
+                    <h3>MSc en Informatique</h3>
+                    <p><strong>National University of Singapore</strong> <i>Singapour</i></p>
+                    <p>Master of Science en Double diplôme</p>
+                </li>
+                <li class="event" data-date="De 2020 à 2023">
                     <h3>Diplôme d'ingénieur</h3>
-                    <p><strong>Télécom ParisTech</strong><i> Palaiseau, France</i></p>
-                    <p>Diplôme d'ingénieur en systèmes embarqués en alternance</p>
+                    <p><strong>Télécom Paris</strong> <i>Palaiseau, France</i></p>
+                    <p>Diplôme d'ingénieur systèmes embarqués en alternance</p>
                 </li>
                 <li class="event" data-date="De 2018 à 2020">
                     <h3>Diplôme universitaire de technologie GEII</h3>
-                    <p><strong>IUT Cachan</strong><i> Cachan, France</i></p>
+                    <p><strong>IUT Cachan</strong> <i>Cachan, France</i></p>
                     <p>Diplôme en génie électrique et informatique industrielle</p>
-                    <p>2ème sur 120 étudiants</p>
-                </li>
-                <li class="event" data-date="De 2015 à 2018">
-                    <h3>Baccalauréat</h3>
-                    <p><strong>Jean Baptiste Say</strong><i> Paris, France</i></p>
-                    <p>Bac en Sciences et Technologies de l'Ingénieur</p>
                 </li>
             </ul>
-            <h2>Projets encadrés</h2>
+            <h2>Projets universitaires</h2>
             <ul class="timeline">
-                <li class="event" data-date="De 2022 à 2023">
+                <li class="event" data-date="2024">
+                    <h3>Thèse de Master</h3>
+                    <p><strong>Systèmes robotiques temps réel optimisés en Rust</strong> <a href="https://github.com/guimath/relaxed_ik_pp" target="_blank">[github]</a> <a href="https://github.com/guimath/relaxed_ik_pp/blob/ranged-ik/master_thesis.pdf" target="_blank">[pdf]</a></p>
+                    <p>Mise en œuvre d'un solveur de cinématique inverse (IK) basé sur l'optimisation et d'un planificateur de mouvement basé RTT</p>
+                    <p>Évaluation par simulation et en conditions réelles pour un mouvement de préhension standard</p>
+                </li>
+                <li class="event" data-date="2023">
                     <h3>Projet de fin d'étude</h3>
-                    <p><strong>Générateur de signal configurable SoC</strong><i> </i></p>
+                    <p><strong>Générateur de signal configurable SoC</strong> <a href="https://github.com/guimath/PrimProj" target="_blank">[github]</a></p>
                     <p>Développement d'une IP FPGA configurable via AXI4 générant un signal (carré ou sinusoïdal)</p>
-                    <p>Gestion des deux cœurs CPU indépendamment pour la communication Ethernet externe et le calcul interne</p>
+                    <p>Gestion des deux cœurs CPU indépendamment pour la communication Ethernet externe et le calcul interne en temps réel</p>
+                </li>
+                <li class="event" data-date="2022">
+                    <h3>Projet de deuxième année</h3>
+                    <p><strong>Infrastructure et démonstrations autour du protocole LoRa</strong></p>
+                    <p>Test du protocole de communication LoRa, enregistrement et déploiement des passerelles</p>
+                    <p>Guide de projet LoRa avec des exemples pour plusieurs situations</p>
                 </li>
                 <li class="event" data-date="2020">
-                    <h3>Projet de deuxième année</h3>
-                    <p><strong>Infrastructure et démonstrations autour du protocole LoRa</strong><i> </i></p>
-                    <p>Test du protocole LoRa, enregistrement et déploiement des passerelles. Guide de projet LoRa avec des exemples pour plusieurs situations</p>
-                </li>
-                <li class="event" data-date="De 2019 à 2020">
                     <h3>Projet final IUT</h3>
-                    <p><strong>Coupe de France de la Robotique (compétition nationale)</strong><i> </i></p>
+                    <p><strong>Coupe de France de la Robotique (compétition nationale)</strong></p>
                     <p>Programmation d'une solution de débogage Bluetooth en C++</p>
                     <p>Développement d'un capteur de couleur intelligent (test de capteur, programmation en C++, conception de circuit imprimé)</p>
                 </li>
             </ul>
             <h2>Expérience professionnelle</h2>
             <ul class="timeline">
-                <li class="event" data-date="Depuis 2021">
-                    <h3>Apprentissage</h3>
-                    <p><strong>Safran Electronics & Defense</strong><i> Massy, France</i></p>
-                    <p>Logiciel embarqué, développement de GUI, SoC, conception de circuit imprimé</p>
+                <li class="event" data-date="De 2021 à 2023">
+                    <h3>Ingénieur alternant prototypage</h3>
+                    <p><strong>Safran Electronics & Defense</strong> <i>Massy, France</i></p>
+                    <p>Développement d'une prototype de capteur</p>
+                    <p>Logiciel embarqué (C), IHM (Python), protocole de communication</p>
+                    <p>Elaboration architecture SoC, conception de circuit imprimé</p>
                 </li>
                 <li class="event" data-date="De avril à juillet 2020">
-                    <h3>Stage</h3>
-                    <p><strong>Laboratoire C2N</strong><i> Palaiseau, France</i></p>
-                    <p>Prototype de capteur 3 omega</p>
+                    <h3>Stage technicien électronique</h3>
+                    <p><strong>Laboratoire C2N</strong> <i>Palaiseau, France</i></p>
+                    <p>Conception de circuit imprimé pour un prototype de capteur 3 omega</p>
                 </li>
             </ul>
         </div>
@@ -85,15 +121,8 @@
             <h2 class="first-h2">Langues</h2>
             <ul>
             <li>
-               <h3 class="first-h3">Français</h3>
-               <p>Courant (langue maternelle)</p>
-               <div class = "progress-bar">
-                   <div class="fill" style="width: 100%;"></div>
-               </div>
-            </li>
-            <li>
-               <h3>Anglais</h3>
-               <p>Courant et certifié niveau technique C1</p>
+               <h3 class="first-h3">Anglais</h3>
+               <p>Bilingue</p>
                <p>TOEIC : 985 | Linguaskill : 180+</p>
                <div class = "progress-bar">
                    <div class="fill" style="width: 90%;"></div>
@@ -111,37 +140,43 @@
             <ul>
             <li>
                <h3 class="first-h3">Langages de programmation</h3>
-               <p><strong>Langages de logiciel</strong>  : C, C++, Python, Rust, Java </p>
+               <p><strong>Logiciel</strong>  : Rust, Python, C, C++</p>
                <p><strong>HDL</strong>  : Verilog, System Verilog</p>
                <p><strong>Développement web</strong>: HTML5, CSS3</p>
             </li>
             <li>
                <h3>Systèmes d'exploitation</h3>
-               <p>Linux Ubuntu & Debian, Windows 10</p>
+               <p><strong>Linux</strong> Ubuntu & Debian</p>
+               <p><strong>Windows</strong> 10 & 11</p>
             </li>
             <li>
                <h3>Environnements de développement</h3>
-               <p>VS code, Vivado/Vitis, µVision, MPLAB, Altera, Qt Creator, Eclipse</p>
+               <p>VS code, Vivado/Vitis, µVision, Qt Creator</p>
             </li>
             </ul>
             <h2>Intérêts</h2>
             <ul>
             <li>
                <h3 class="first-h3">Programmation Competitive</h3>
-               <p>Participation à la phase de selection pour l'ICPC : <a href="https://swerc.eu/2022/about/" target="_blank">SWERC</a> 2023 à Milan</p>
+               <p>Participation à la phase de selection pour l'ICPC : SWERC 2023 à Milan</p>
             </li>
             <li>
                <h3>Escalade</h3>
-               <p>3 ans de pratique régulière (principalement le bloc).</p>
-               <p>Niveau 6A / V6. Expériences multiples d'escalade en falaise</p>
+               <p>Pratique régulière (principalement bloc).</p>
+               <p>Niveau 6A. Expériences multiples d'escalade en falaise</p>
             </li>
             <li>
                <h3>Natation</h3>
                <p>Entraînement hebdomadaire</p>
             </li>
             <li>
-               <h3>Travaux manuels, bricolage</h3>
-               <p>Construction de PC, conception et câblage de luminaires de plafond</p>
+               <h3>Plongée</h3>
+               <p>Certification de plongée en bouteille et de plongée en apnée (freedive)</p>
+            </li>
+            <li>
+               <h3>Photographie</h3>
+               <p>Photographe amateur, principalement des paysage, avec un Fujifilm XT200 </p>
+               <p><a href="https://www.instagram.com/guilhemphotography/" target="_blank">[Quelques-unes de mes photos]</a></p>
             </li>
             </ul>
         </div>

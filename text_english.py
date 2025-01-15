@@ -1,7 +1,7 @@
 # Basically json but directly in python just cause 
 TEXT = {
-    'theme_button':'Dark Theme',
-    'job_title' : 'Robotics systems engineer',
+    'language': 'english',
+    'job_title' : 'Embedded systems engineer',
     'age' : '24 years old',
     'education_title': 'Education',
     'education_lst' :[
@@ -98,14 +98,16 @@ TEXT = {
             'date'      :'From 2021 to 2023',
             'sub_title' :'Safran Electronics & Defense', 
             'location'  :'Massy, France', 
-            'desc'      :['Embedded Software, GUI dev, SoC, PCB design'],
+            'desc'      :['Development of a sensor prototype',
+                          'Embedded Software (C), GUI (Python), Communication protocol',
+                          'SoC architecture and PCB design'],
         },
         {
             'title'     :'Internship', 
             'date'      :'From April to July 2020',
             'sub_title' :'C2N laboratory', 
             'location'  :'Palaiseau, France', 
-            'desc'      :['3 omega sensor prototype',],
+            'desc'      :['PCB design for a 3 omega sensor prototype',],
         },
     ],
 
@@ -135,14 +137,15 @@ TEXT = {
         {
             'name' : 'Programming Languages',
             'desc' : [
-                '<strong>Software Language</strong>  : Rust, Python, C, C++',
+                '<strong>Software</strong>  : Rust, Python, C, C++',
                 '<strong>HDL</strong>  : Verilog, System Verilog',
                 '<strong>Web Dev</strong>: HTML5, CSS3'
             ],
         },
         {
             'name' : 'Operating Systems',
-            'desc' : ['Linux Ubuntu & Debian, Windows 10 & 11'],
+            'desc' : ['<strong>Linux</strong> Ubuntu & Debian',
+                      '<strong>Windows</strong> 10 & 11'],
         },
         {
             'name' : 'Development environment',
@@ -162,16 +165,20 @@ TEXT = {
             'name' : 'Climbing',
             'desc' : [
                 '3 years of regular practice (mainly bouldering).',
-                '6A / V6 level Multiple cliff climbing experiences'
+                '6A / V6 level, multiple cliff climbing experiences'
             ],
         },
         {
             'name' : 'Swimming',
             'desc' : ['Weekly training'],
         },
+        # {
+        #     'name' : 'Handiwork, DIY',
+        #     'desc' : ['Building PCs, Ceiling light design and wiring'],
+        # },
         {
-            'name' : 'Handiwork, DIY',
-            'desc' : ['Building PCs, Ceiling light design and wiring'],
+            'name' : 'Diving',
+            'desc' : ['Open water certification for both scuba and freedive'],
         },
         {
             'name' : 'Photography',

@@ -1,6 +1,6 @@
 TEXT = {
-    'theme_button':'Thème sombre',
-    'job_title' : 'Ingénieur logiciel embarqué',
+    'language': 'french',
+    'job_title' : 'Ingénieur systèmes embarqués',
     'age' : '24 ans',
     'education_title': 'Formation',
     'education_lst' : [
@@ -16,7 +16,7 @@ TEXT = {
             'date'      :'De 2020 à 2023',
             'sub_title' :'Télécom Paris', 
             'location'  :'Palaiseau, France', 
-            'desc'      :['Diplôme d\'ingénieur en systèmes embarqués en alternance'],
+            'desc'      :['Diplôme d\'ingénieur systèmes embarqués en alternance'],
         },
         {
             'title'     :'Diplôme universitaire de technologie GEII', 
@@ -99,7 +99,9 @@ TEXT = {
             'date'      :'De 2021 à 2023',
             'sub_title' :'Safran Electronics & Defense', 
             'location'  :'Massy, France', 
-            'desc'      :['Logiciel embarqué, développement d\'IHM, architecture SoC, conception de circuit imprimé'],
+            'desc'      :['Développement d\'une prototype de capteur',
+                          'Logiciel embarqué (C), IHM (Python), protocole de communication',
+                          'Elaboration architecture SoC, conception de circuit imprimé'],
         },
         {
             'title'     :'Stage technicien électronique', 
@@ -107,7 +109,7 @@ TEXT = {
             'sub_title' :'Laboratoire C2N', 
             'location'  :'Palaiseau, France', 
             'desc'      :[
-                'Prototype de capteur 3 omega',
+                'Conception de circuit imprimé pour un prototype de capteur 3 omega',
             ],
         },
     ],
@@ -123,7 +125,7 @@ TEXT = {
             'name' : 'Anglais',
             'level': 90,
             'desc' : [
-                'Courant et certifié niveau technique C1',
+                'Bilingue',
                 'TOEIC : 985 | Linguaskill : 180+'
             ]
         },
@@ -138,14 +140,15 @@ TEXT = {
         {
             'name' : 'Langages de programmation',
             'desc' : [
-                '<strong>Langages de logiciel</strong>  : Rust, Python, C, C++',
+                '<strong>Logiciel</strong>  : Rust, Python, C, C++',
                 '<strong>HDL</strong>  : Verilog, System Verilog',
                 '<strong>Développement web</strong>: HTML5, CSS3'
             ],
         },
         {
             'name' : 'Systèmes d\'exploitation',
-            'desc' : ['Linux Ubuntu & Debian, Windows 10 & 11'],
+            'desc' : ['<strong>Linux</strong> Ubuntu & Debian',
+                      '<strong>Windows</strong> 10 & 11'],
         },
         {
             'name' : 'Environnements de développement',
@@ -164,8 +167,8 @@ TEXT = {
         {
             'name' : 'Escalade',
             'desc' : [
-                '3 ans de pratique régulière (principalement le bloc).',
-                'Niveau 6A / V6. Expériences multiples d\'escalade en falaise'
+                'Pratique régulière (principalement bloc).',
+                'Niveau 6A. Expériences multiples d\'escalade en falaise'
             ],
         },
         {

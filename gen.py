@@ -1,8 +1,11 @@
 
 import os
 import text_english, text_french
+from pathlib import Path
+import asyncio
+from pyppeteer import launch
 
-
+ABS_PATH = Path(__file__).parent
 
 
 
@@ -68,7 +71,7 @@ def generic_lst(title, lst, first=False, space='            '):
     return out + f'{space}</ul>\n'
 
 def save_to_file(text, rel_path):
-    abs_path = os.path.dirname(os.path.realpath(__file__))+os.sep+rel_path
+    abs_path = ABS_PATH / rel_path
     with open(abs_path, mode ='w',encoding='utf-8') as file:  
         file.truncate()
         file.write(text)
@@ -200,13 +203,33 @@ def gen(json, eng=True, to_pdf=False, default_dark=False):
 </html>'''
     return html
 
+async def generate_pdf(url, pdf_path, scale):
+    browser = await launch()
+    page = await browser.newPage()
+    await page.goto(url)
+    await page.pdf({'path': pdf_path, 'format': 'A4', 'scale': scale, 'printBackground':True})
+    await browser.close()
 
+def gen_pdf_all_theme(text, scale=0.73):
+    folder = 'pdf_render'
+    base_name = f'{text["language"]}_CV'
+    html_light= f'z_{base_name}.html'
+    html_dark = f'z_{base_name}_dark.html'
+    pdf_light = f'{folder}/{base_name}.pdf'
+    pdf_dark  = f'{folder}/{base_name}_dark.pdf'
+    local_host = 'http://127.0.0.1:5500'
+    save_to_file(gen(text, False, True), html_light) # saving to file cause direct html leads to artifacts
+    save_to_file(gen(text, False, True, True), html_dark)
+    asyncio.get_event_loop().run_until_complete(generate_pdf(f'{local_host}/{html_light}', pdf_light, scale))
+    asyncio.get_event_loop().run_until_complete(generate_pdf(f'{local_host}/{html_dark}', pdf_dark, scale))
+    os.remove(ABS_PATH / html_light)
+    os.remove(ABS_PATH / html_dark)
 
 def main():
     save_to_file(gen(text_french.TEXT, False), 'french-cv.html')
-    save_to_file(gen(text_french.TEXT, False, True), 'french-cv-pdf.html')
-    save_to_file(gen(text_french.TEXT, False, True, True), 'french-cv-pdf-dark.html')
+    gen_pdf_all_theme(text_french.TEXT)
     save_to_file(gen(text_english.TEXT, True), 'index.html')
+    gen_pdf_all_theme(text_english.TEXT)
 
 if __name__ == "__main__" :
     main()

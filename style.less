@@ -396,19 +396,21 @@ footer {
 @media screen
   and (orientation: portrait){
     .main-div {
-      display: block;
-    }
-    .col2 {
-      border-left: 0px;
-      padding-left: @date+@spacing;
-      padding-right: @date+@spacing;
-      margin-left : @spacing;
-      margin-right : @spacing;
+      // display: block;
+      flex-direction: column;
 
-      margin-top: @spacing;
-      border-top: solid;
-      border-top-color: fade(@color-primary, 30%);
-      padding-top : @spacing;
+      .col2 {
+        border-top: solid;
+        border-top-color: fade(@color-primary, 30%);
+        border-left: none;
+        padding-left: @date+@spacing;
+        padding-right: @date+@spacing;
+        margin-left : @spacing;
+        margin-right : @spacing;
+  
+        margin-top: @spacing;
+        padding-top : @spacing;
+      }
     }
   footer {
     padding-left: @spacing;

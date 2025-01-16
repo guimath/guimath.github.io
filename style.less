@@ -28,10 +28,16 @@
 
 
 // fonts
-@font-title: Lato, sans-serif;
+@font-main-title: Verdana, sans-serif;
+@font-title: Arial, sans-serif;
 @font-sub-title: Arial, sans-serif;
 @font-text: Arial, sans-serif;
-
+@font-dates: Arial, sans-serif;
+@font-title-size: 1.5rem;
+@font-sub-title-size: 1.2rem;
+@font-text-size: 1rem;
+@font-dates-size: 0.8rem;
+@text-line-height: 1.4em;
 // timeline
 @spacing: 15px;
 @radius: 4px;
@@ -40,10 +46,10 @@
 @dot: 15px;
 
 // space partitions
-@header-height: 15vh; //TODO param for smaller in pdf format
-@footer-height : 3vh;
-@logo-height : 2.5vh;
-@main-div-height: 99vh - @header-height;
+@header-height: @font-text-size*8;
+@footer-height : @font-text-size*2;
+@logo-height : @font-text-size;
+@main-div-height: 100vh - @header-height - @footer-height;
 
 @main-side-width: 65%;
 
@@ -61,10 +67,11 @@ body {
   // background: @background;
   margin:0px;
   // letter
-  letter-spacing: 0.5px;
-  line-height: 1.4em;
-  font-size: 1.03em;
+  // letter-spacing: 0.5px;
+  line-height: @text-line-height;
   font-family: @font-text;
+  font-size: @font-text-size;
+
   color : @text-color;
   p {
     margin: 0;
@@ -84,11 +91,14 @@ body {
     color: @color-primary;
     margin-bottom: 0%;
     padding-bottom: 0%;
+    font-family: @font-title;
+    font-size: @font-title-size;
   }
 
   h3 {
     color: @color-secondary;
     font-family:  @font-sub-title;
+    font-size: @font-sub-title-size;
     margin-bottom: 0%;
   }
   .first-h2 {
@@ -182,7 +192,8 @@ body {
       text-align: right;
 
       width: @date;
-      font-family: @font-title;
+      font-family: @font-dates;
+      font-size:@font-dates-size;
     }
 
     &:after {
@@ -257,18 +268,24 @@ body {
       justify-content: space-evenly;
 
       h1 {
+        font-family: @font-title;
+        font-size: @font-title-size;
         margin: 0;
         padding: 0;
       }
     
       h3{
+        font-family: @font-sub-title;
+        font-size: @font-sub-title-size;
         color: fade(@background, 70%);
       }
+
     }
   }
 
-
   .infos-div {
+    font-family: @font-text;
+    font-size: @font-text-size;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -276,8 +293,10 @@ body {
     .icon-header {
       padding: 0;
       vertical-align: middle;
-      height: 25px;
-      width: 25px;
+      font-size: 0;
+
+      height: @font-text-size;
+      width:  @font-text-size;//@font-text-size;
       fill: @background;
     }
    
@@ -305,19 +324,22 @@ footer {
   padding-bottom: 0;
   padding-right: 10%;
   padding-left: 10%;
+  font-family: @font-text;
+  font-size: @font-text-size;
   a {
-    font-size: 1.03em;
     color: @background;
     text-decoration: none;//remove underline
   }
   .slogo {
     fill: @background;
-    height: 24px;
-    vertical-align: -7px;
+    height: @font-text-size;
+    width: @font-text-size;
+    // height: 24px;
+    vertical-align: middle;
   }
 
   .linkedin {
-    vertical-align: -5px;
+    vertical-align: -0.1 * @font-text-size;
   }
 }
 

@@ -56,7 +56,7 @@ body .main-div-cont {
   background: #4D5061;
   margin: 0;
   padding-top: 15px;
-  min-height: 90vh;
+  min-height: 87vh;
 }
 body .main-div {
   padding: 0;
@@ -151,7 +151,7 @@ body .col2 {
   display: flex;
   justify-content: space-between;
   position: relative;
-  height: 8rem;
+  height: 11rem;
   padding-right: 15px;
   padding-left: 15px;
   align-items: center;
@@ -164,7 +164,7 @@ body .col2 {
   display: flex;
 }
 .headr .img-and-title .image-container {
-  height: 8rem;
+  height: 11rem;
   overflow: hidden;
   margin: 0;
   margin-right: 15px;

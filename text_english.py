@@ -39,7 +39,7 @@ TEXT = {
         {
             'title'     :'Master Thesis', 
             'date'      :'2024',
-            'sub_title' :'Leveraging Rust for real time low computational robotics', 
+            'sub_title' :'Real time low computational robotics in Rust', 
             'location'  :'', 
             'desc'      :[
                 'Implementation of an optimization based Inverse Kinematics solver and RTT motion planner',
